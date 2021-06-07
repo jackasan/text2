@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        #container {
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        h2 {
+            border-bottom: 1px solid #000;
+            padding-bottom: 8px;
+            width: 180px ;
+            margin:0 auto;
+        }
+        #header {
+            display: flex;
+            align-items: center;
+            background-color: orangered;
+            height: 60px;
+
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 5px;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        #content hr {
+            width: 50px;
+            border-bottom: 3px solid #000;
+            color: #000;
+
+        }
+
+        #content ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+
+        }
+
+        #content ul li {
+            width: 20%;
+            list-style: none;
+        }
+
+        #content img {
+            width: 250px;
+            height: 400px;
+        }
+
+        .title {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+        }
+
+        #tail {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            background-color: orangered;
+            width: 1200px;
+            height: 300px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-top: 50px;
+
+        }
+
+        .text {
+            flex-grow: 4;
+            position: absolute;
+            /* position: fixed; */
+            left: 100px;
+
+            width: 500px;
+            height: 20%;
+            border: 1px solid gray;
+            font-size: 20px;
+
+
+        }
+
+        .pt {
+
+            position: absolute;
+            /* position: fixed; */
+            right: 0;
+            flex-grow: 1;
+            display: block;
+            margin-right: 30px;
+            width: 30%;
+            height: 30%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w">
+        <!--头部-->
+        <div id='header'>
+            <div id="container" class="logo between">
+                <div class="logo" style="margin-left: 100px;">
+                    <img  width=50px; src="C:\Users\Administrator\Desktop\前端实训素材\1.jpg" alt="">
+                    <span >3182703115韦贵海</span>
+                </div>
+                <ul class="nav" style="margin-right: 100px;">
+                    <li><a href="#">喜欢的电影</a></li>
+                    <li><a href="#">喜欢的书</a></li>
+                    <li><a href="#">聊一聊</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--内容-->
+        <div>
+            <div id='content' class="container">
+                <div class="movie">
+                    <div class="title">
+                        <h2>喜欢的电影</h2>
+
+                    </div>
+
+                    <ul>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\3.jpg" alt="">
+                            <h4>唐人街探案3</h4>
+                        </li>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\5.png" alt="">
+                            <h4>钢铁侠3</h4>
+                        </li>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\6.png" alt="">
+                            <h4>复仇者联盟4</h4>
+                        </li>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\8.png" alt="">
+                            <h4>流浪地球</h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="book">
+                    <div class="title">
+                        <h2>喜欢的书</h2>
+
+                    </div>
+
+                    <ul>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\9.jpg" alt="">
+                            <h4>一千零一夜</h4>
+                        </li>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\10.jpg" alt="">
+                            <h4>神雕侠侣</h4>
+                        </li>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\11.jpg" alt="">
+                            <h4>西游记</h4>
+                        </li>
+                        <li style="text-align: center;">
+                            <img src="C:\Users\Administrator\Desktop\前端实训素材\12.jpg" alt="">
+                            <h4>红楼梦</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--尾部-->
+        <div id="tail">
+            <div class="text">
+                <li>黄敬炜说他是一只特立独行的猪，那我就当特立独行的鸟吧。交个朋友吗，扫下右边的二维码。</li>
+            </div>
+            <div class="pt">
+                <img style="width: 200px; height: 200px;" src="C:\Users\Administrator\Desktop\前端实训素材\4.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
