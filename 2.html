@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.wrapper{
+				width: 100%;
+				height: 1000px;
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+			}
+			.header{
+				width: 100%;
+				height: 20%;
+				border: 1px solid gray;
+                background-color:rgb(3, 46, 63);
+                font-size:200%;
+            }
+            
+            .header div{
+                margin:60px auto;
+            }
+			.contain{
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				height: 80%;
+				border: 1px solid gray;
+                
+			}
+			.left{
+				width: 30%;
+				height: 100%;
+                border: 1px solid black;
+                text-align: center;
+			}
+			.main{
+				width: 70%;
+				height: 100%;
+			}
+			.footer{
+				width: 100%;
+				height: 5%;
+				border: 1px solid gray;
+                font-size: 50%;
+                background-color:rgb(3, 46, 63) ;
+			}
+			a{
+				color: black;
+			}
+            .changeColor{
+                color: white;
+            }
+            .textleft{
+                width: 100px;
+                height: 100%;
+                margin: 0 auto;
+                text-align: left;
+            }
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+            <!-- 头部 -->	
+            <div class="header"> 	
+                <div>
+                    <h1 class="changeColor"  style="vertical-align: middle;">来杯咖啡吗</h1> 
+               </div>                
+            </div>		
+			<!-- 核心 -->
+			<div class="contain">
+				<div class="left">
+                    <div class="textleft">
+					    <ul >
+						    <li><a href="#">拿铁</a></li>
+                            <li><a href="#">卡布奇诺</a></li>
+                            <li><a href="#">奥瑞白</a></li>
+						    <li><a href="#">美式咖啡</a></li>
+						    <li><a href="#">焦糖玛奇朵</a></li>
+                        </ul>
+                    </div>
+				</div>
+				<div class="main">
+                        <img src="C:\Users\Administrator\Desktop\前端实训素材\1.jpg" alt="">
+						<h3>拿铁</h3>
+						<br>
+						<br>
+                        <p  >
+                            拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。喝拿铁的意大利人，与其说他们喜欢意大利浓缩咖啡，不如说他们喜欢牛奶，也只有Espresso才能给普普通通的牛奶带来让人难以忘怀的味道。
+                        </p>
+				</div>
+			</div>
+			<!-- 底部	 -->
+			<div class="footer">
+				<div>
+                    <h1 class="changeColor"  style="vertical-align: middle;">版权所在&copy;极客大叔</h1>
+                </div>
+			</div>
+		</div>
+		
+		
+		
+	</body>
+</html>

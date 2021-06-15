@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .screen{
+        width: 1000px;
+        margin: 100px auto;
+        background: #e8e8e8;
+        height: 500px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        position: relative;
+        overflow: hidden;
+    }
+    .shoot {
+            border: 1px solid rgb(230, 80, 30);
+            color: rgb(230, 80, 0);
+            border-radius: 3px;
+            text-align: center;
+            padding: 0;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            width: 159px;
+            background-color: white;
+        }
+
+        .clear {
+            border: 1px solid;
+            color: darkgray;
+            border-radius: 3px;
+            text-align: center;
+            padding: 0;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            width: 159px;
+            background-color: white;
+        }
+        .inpput {
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 3px;
+            width: 320px;
+            height: 35px;
+            font-size: 14px;
+            margin-top: 30px;
+
+        }
+    .text{
+        width: 1000px;
+        margin: 0px auto;
+        text-align: center;
+    }
+    .btn{
+        padding: 5px 20px;
+        display: inline-block;
+        border-radius: 3px;
+        border: 1px solid #e0e0e0;
+        margin: 15px;
+        background: #37a;
+        color: #fff;
+        cursor: pointer;
+    }
+        .button{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen"></div>
+    <input type="text"><br>
+    <div class="btn">
+        <button class="shoot">发射</button>
+        <button class="clear">清屏</button>
+    </div>
+    <script type="text/javascript" src="./jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.shoot').click(function(){
+                var txt=$('input').val();
+                var span=$('<span></span>');
+                var fontsize = parseInt(Math.radom() * 40)+20;
+                var top = parseInt(Math.radom() * 400)- 20;
+                var color1=parseInt(Math.radom() * 256);
+                var color2=parseInt(Math.radom() * 256);
+                var color3=parseInt(Math.radom() * 256);
+                var color ="rgb(" + color1 + "," + color2+ "," + color3 +")";
+                top =top <20?30:top;
+                top =top + 'px';
+                fontsize =fontsize +'px';
+                span.css('positon','absolute').css('top',top).css('right','0').css('color',color).css('font-size',fontsize);
+                var v = (Math.random()*20000);
+                v = v <3000?5000 :v;
+                span.html(txt);
+                $('.screen').append(span);
+                $('.screen').children().animate({
+                    right:'100%'
+                },v,function(){
+                    $(this).remove();
+                })
+            })
+            //清屏
+            $('clear').click(function(){
+                $('.screen').empty();
+            })
+            $('input').keyup(function(e){
+                if(e.keyCode==13){
+                    $('shoot').click;
+                }
+            })
+        })
+    </script>
+</body>
+</html>
