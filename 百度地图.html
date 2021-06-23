@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>异步加载地图</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <style>
+    body,
+    html,
+    #container {
+        overflow: hidden;
+        width: 500px;
+        height: 800px;
+        margin: 0;
+        font-family: "微软雅黑";
+    }
+    #header {
+            display: flex;
+            width: 1200px;
+            align-items: center;
+            background-color: rgb(235, 234, 231);
+         }
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .c{
+            font-weight: bolder;
+            width: 100px;
+            font-size: 13px;
+        }
+        .nav {
+            float: right;
+            list-style: none;
+            width: 1200px;
+        }
+        #container {
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .nav li {
+            float: right;
+            margin-left: 20px;
+            font-weight: bolder;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w">
+        <!--头部-->
+        <div id='header'>
+            <div id="container" class="logo between">
+                <div class="logo" style="margin-left: 100px;">
+                    <img  width=15px; src="img/图标.png" alt="">
+                    <span class="c">复仇者联盟</span>
+                </div>
+                    <ul class="nav" style="margin-right: 100px;">
+                        <li><a style="color: black;" href="about.html">关于我们   </a></li>
+                        <li><a style="color: black;" href="news.html">新闻   </a></li>
+                        <li><a style="color: black;" href="qyz.html">首页   </a></li>
+                    </ul>
+            </div>
+        </div>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+function loadJScript() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'http://api.map.baidu.com/api?type=webgl&v=1.0&ak=WRg0Gu1FKKHCdpweKave3NcVezWciu7X&callback=init';
+    document.body.appendChild(script);
+}
+function init() {
+    var map = new BMapGL.Map('container'); // 创建Map实例
+    var point = new BMapGL.Point(119.176895,26.072713); // 创建点坐标
+    map.centerAndZoom(point, 10);
+    map.enableScrollWheelZoom(); // 启用滚轮放大缩小
+}
+window.onload = loadJScript; // 异步加载地图
+</script>

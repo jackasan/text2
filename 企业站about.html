@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+         #header {
+            display: flex;
+            width: 1200px;
+            align-items: center;
+            background-color: rgb(244, 244, 244);
+         
+         }
+        .w {
+            width: 1200px;
+            margin: 0 auto !important;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .c{
+            font-weight: bolder;
+            width: 100px;
+            font-size: 13px;
+        }
+        .nav {
+            float: right;
+            list-style: none;
+            width: 1200px;
+        }
+        #container {
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .nav li {
+            float: right;
+            margin-left: 20px;
+            font-weight: bolder;
+            font-size: 13px;
+        }
+        .db{
+            width: 1200px;
+            height: 400px;
+            background-color: rgb(215, 215, 215);
+        }
+        .q{
+            margin-left: 30px;
+        }
+        .r{
+            margin-top: 80px;
+            margin-left: 25px;
+        }
+        .s{
+            margin-top: 80px;
+            margin-left: 80px;
+        }
+        .t{
+            margin-top: 80px;
+            margin-left: 80px;
+        }
+        .u{
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+        .gywm{
+           
+            text-align: center;
+            width: 1200px;
+            height: 32px;
+            background-color: rgb(244, 244, 244);
+        }
+        .v{
+            vertical-align: top;
+            height: 300px;
+            width: 1000px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 100px;
+            position: relative;
+        }
+        #ditu {  
+        vertical-align: top;    
+        display: inline-block;
+        width: 500px;
+        height: 300px;
+        margin: 0;
+        font-family: "微软雅黑";
+    }
+        .x{
+            vertical-align: top;
+            display: inline-block;
+            font-size: 14px;
+            height: 300px;
+            height: 250px;
+            margin-left: 50px;
+            position: absolute;
+        }
+        .y{
+            width: 150px;
+            height: 30px;    
+        }
+    </style>
+</head>
+<body>
+    <div class="w">
+        <!--头部-->
+        <div id='header'>
+            <div id="container" class="logo between">
+                <div class="logo" style="margin-left: 100px;">
+                    <img  width=15px; src="img/图标.png" alt="">
+                    <span class="c">复仇者联盟</span>
+                </div>
+                    <ul class="nav" style="margin-right: 100px;">
+                        <li><a style="color: black;" href="企业站about.html">关于我们   </a></li>
+                        <li><a style="color: black;" href="企业站news.html">新闻   </a></li>
+                        <li><a style="color: black;" href="企业站首页.html">首页   </a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="gywm"> 
+            <h2 style="margin: 0;">关于我们</h2>
+        </div>
+        <div class="v">
+        <div id="ditu"></div>
+        <div class="x">
+            <h4 style="color: darkgray;"> 复仇者联盟以拯救世界为已任。
+                创始人为钢铁侠、雷神托尔、绿巨人、蚁人和黄蜂侠。
+                从一开始复仇者联盟的成员名单便不断的变动，第二期绿巨人就离队
+                ，改由美国队长加入。
+                不断更改的成员名单已成为复仇者联盟的特点
+                ，但一个主题从未变过，那就是专与单一超级英雄无法应付的敌人作战。</h4>
+            <div class="y">
+                <img  src="img/dz.png" alt="">
+                <img  src="img/yx.png" alt="">
+                <img  src="img/dh.png" alt="">
+            </div>
+        </div>
+        </div>
+         <!--底部-->
+         <div class="db">
+            <div class="q">
+                <img class="r"  width="200px" height="200px" src="img/地址.png" alt="">
+                <img class="s"  width="200px" height="200px" src="img/邮箱.png" alt="">
+                <img class="t"  width="200px" height="200px" src="img/电话.png" alt="">
+                <img class="u"  width="300px" height="300px" src="img/二维码.png" alt="">
+            </div>
+        </div>
+    </div>
+
+<script>
+    function loadJScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://api.map.baidu.com/api?type=webgl&v=1.0&ak=WRg0Gu1FKKHCdpweKave3NcVezWciu7X&callback=init';
+        document.body.appendChild(script);
+    }
+    function init() {
+        var map = new BMapGL.Map('ditu'); // 创建Map实例
+        var point = new BMapGL.Point(119.16394,26.06679); // 创建点坐标
+        map.centerAndZoom(point, 10);
+        map.enableScrollWheelZoom(); // 启用滚轮放大缩小
+    }
+    window.onload = loadJScript; // 异步加载地图
+</script>
+</body>
+</html>
