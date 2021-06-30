@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./布局.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jqurey.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        /* body{
+    width: 1200px;
+    margin: auto;
+}
+#navbarSupportedContent{
+    width: 300px;
+    float: right;
+}
+#lists li{
+    float: right;
+} */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,li{
+    list-style-type: none;
+    padding: 0px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+.navbars{
+    /* background-color: brown; */
+    font-size: 18px;
+}
+.navbarsone{
+    background-color: #fe4b4e;
+    /* font-size: 18px; */
+}
+.navbars .navbar-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.navbars .navbar-box .logo{
+    color: #fff;
+}
+.navbars .navbar-box .menu{
+    display: none;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 20px;
+}
+@media screen and(max-width:720px){
+    .navbars .navbar-box .list{
+        display: none;
+    }
+    .navbars .navbar-box  .menu{
+        display: block;
+    }
+    .list-mobile{
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* @media screen and(min-width:960px){
+    #lists{
+        margin-left: 60% !important;
+    }
+    
+} */
+/* .active a{
+    float: right;
+} */
+/* 头部止 */
+
+
+.content .title{
+    text-align: center;
+}
+.content .title .a{
+    height: 4px;
+    background-color: brown;
+    width: 100px;
+    margin: 0 auto;
+}
+.content .title #mv{
+    margin: 20px;
+}
+.content .rows img{
+    width: 94%;
+    margin: 3%;
+}
+.content .rows .card-box{
+    width: 200px;
+    height: 310px;
+    background-color: #888;
+    margin: 0 auto 10px;
+}
+.content .rows .card-box .a{
+    text-align: center;
+}
+.content .rows .card-box:hover img{
+    width: 98%;
+    margin: 1%;
+}
+
+
+
+
+
+.footer{
+    margin-top: 50px;
+    width: 100%;
+    background-color:#6d1224;
+    color: #fff;
+    
+
+}
+.footer .a{
+    margin-left:10% ;
+    margin-right:10% ;
+    padding-top: 80px;
+    font-size:22px ;
+}
+.footer .b{
+    height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-top: 7px solid #000;
+    font-size: 20px;
+    text-align: center;
+}
+.footer #footer-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.rows{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media screen and(min-width:540px) {
+    .col-sm-12{
+        width: 100%;
+    }
+    .col-sm-6{
+        width: 50%;
+    }
+    .col-sm-4{
+        width: 33.3%;
+    }
+    .col-sm-3{
+        width: 25%;
+    }
+    .col-sm-2{
+        width: 20%;
+    }
+    
+}
+
+@media screen and(min-width:720px){
+   .col-md-12{
+       width: 100%;
+   }
+   .col-md-6{
+       width: 50%;
+   }
+   .col-md-4{
+       width: 33.3%;
+   }
+   .col-md-3{
+       width: 25%;
+   }
+   .col-md-2{
+       width: 16.6666667%;
+   }
+    
+}
+@media screen and(min-width:960px){
+   .col-lg-12{
+       width: 100%;
+   }
+   .col-lg-6{
+       width: 50%;
+   }
+   .col-lg-4{
+       width: 33.3%;
+   }
+   .col-lg-3{
+       width: 25%;
+   }
+   .col-lg-2{
+       width: 16.6666667%;
+   }
+    
+}
+@media screen and(min-width:1140px){
+   .col-xl-12{
+       width: 100%;
+   }
+   .col-xl-6{
+       width: 50%;
+   }
+   .col-xl-4{
+       width: 33.3%;
+   }
+   .col-xl-3{
+       width: 25%;
+   }
+   .col-xl-2{
+       width: 16.6666667%;
+   }
+    
+}
+.footer #footer-img{
+    display: flex;
+    justify-content: flex-end;
+}
+    </style>
+<body>
+    <!-- <div class="box"> -->
+
+    <!-- 头部 -->
+    <nav class=" navbar-expand-lg navbar-light  navs navbars">
+        <div class="navbar-box container navbarsone">
+            <div class="a logo">
+                <img src="./imgs/img9.png" alt="">
+                <a style="color: white;" class="navbar-brand" href="#">极客大叔的网站</a>
+            </div>
+
+            <!--  -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto b list" id="lists">
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="#">喜欢的电影</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="#">喜欢的书</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="#">聊一聊</a>
+                    </li>
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+            <!-- 菜单按钮 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span style="color: white;">菜单</span>
+            </button>
+        </div>
+    </nav>
+        <!-- 头部止 -->
+
+        <div class="content container">
+            <div class="title">
+                <h2 id="mv">喜欢的电影</h2>
+                <div class="a"></div>
+                <br>
+            </div>
+            <ul class="rows row">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/5.png" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">钢铁侠3</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/8.png" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">流浪地球</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="title">
+                <h2 id="book">喜欢的书</h2>
+                <br>
+                <div class="a">
+                </div>
+                <br>
+            </div>
+            <ul class="rows row">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/11.jpg" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">西游记</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/12.jpg" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">红楼梦</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="rows row">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/9.jpg" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">1001夜</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/10.jpg" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">神雕侠侣</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="rows row">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/6.png" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">复仇者联盟3</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="02.webp">
+                            <img src="img/加载.png" data-src="img/7.png" alt="" style="width: 190px;height: 270px;">
+                            <div class="a">超凡蜘蛛侠</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer" style="width: 80%;margin: auto;">
+            <div id="liao" class="a row">
+                <div class="col-xl-6 col-lg-12">
+                    <div>
+                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp王小波说他是一只特立独行的猪，那我就当个一只特立独行的鸟吧。</p>
+                        <p>交个朋友么?扫下右边的二维码。</p>
+                    </div>
+                </div>
+                <div id="footer-img" class="col-xl-6 col-lg-12">
+                    <img src="img/加载.png" data-src="img/4.png" alt="" style="width: 200px;">
+                </div>
+            </div>
+            <!-- <hr> -->
+            <div class="b">
+                版权所有@极客大叔
+            </div>
+        </div>
+        <script type="text/javascript" src="./jquery-3.1.1.min.js"></script>
+        <!-- </div> -->
+        <script>
+            $(function () {
+                $('#menu').click(function () {
+                    if ($('#lists').hasClass('list-mobile')) {
+                        $('#lists').removeClass('list-mobile')
+                    }
+                    else {
+                        $('#lists').addClass('list-mobile')
+                    }
+                })
+            })
+        </script>
+         <script>
+         window.onload = function(){
+	var imgs = document.querySelectorAll('img');
+	function getTop(e){
+		return e.offsetTop;
+	}
+	function lazyload(imgs){
+		var h = window.innerHeight;
+		var s = document.documentElement.scrollTop || document.body.scrollTop;
+		for(var i=0;i<imgs.length;i++){
+			if ((h+s)>getTop(imgs[i])) {
+				(function(i){
+					setTimeout(function(){
+						var temp = new Image();
+						temp.src = imgs[i].getAttribute('data-src');//只会请求一次
+						
+						temp.onload = function(){
+							imgs[i].src = imgs[i].getAttribute('data-src')
+						}
+					},2000)
+				})(i)
+			}
+		}
+	}
+	lazyload(imgs);
+
+	// 滚屏函数
+	window.onscroll =function(){
+		lazyload(imgs);
+	}
+}
+         </script>
+</body>
+
+</html>

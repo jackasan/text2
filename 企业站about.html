@@ -37,7 +37,7 @@
             text-align: center;
             margin: 0 auto;
         }
-        .nav li {
+        .topnav li {
             float: right;
             margin-left: 20px;
             font-weight: bolder;
@@ -45,7 +45,7 @@
         }
         .db{
             width: 1200px;
-            height: 400px;
+            
             background-color: rgb(215, 215, 215);
         }
         .q{
@@ -76,12 +76,12 @@
         }
         .v{
             vertical-align: top;
-            height: 300px;
+            /* height: 300px; */
             width: 1000px;
             margin-top: 50px;
             margin-bottom: 50px;
             margin-left: 100px;
-            position: relative;
+            /* position: relative; */
         }
         #ditu {  
         vertical-align: top;    
@@ -95,15 +95,121 @@
             vertical-align: top;
             display: inline-block;
             font-size: 14px;
+            width: 400px;
             height: 300px;
-            height: 250px;
             margin-left: 50px;
-            position: absolute;
+            /* position: absolute; */
         }
         .y{
             width: 150px;
             height: 30px;    
         }
+        ul.topnav li {float: left;}
+
+    ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+        ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+    ul.topnav li a.active {background-color: #4CAF50;}
+
+    ul.topnav li.right {float: right;}
+
+    @media screen and (max-width: 800px){
+        ul.topnav li.right,
+        ul.topnav li {float: none;}
+    }
+    @media screen and (max-width: 1000px){
+        .page{
+            width:500px ;
+            
+        }
+        #header{
+        width: 1000px;}
+        .p{
+            width: 800px;
+            margin-left: 60px;
+        }
+        .gywm{
+            width:1000px ;
+        }
+        .o{
+            width: 1000px;
+            height: 200px;
+        }
+        .db{
+            width: 1000px;
+        }
+        .v{
+            width: 800px;
+        }
+        .x{
+            margin-left: 0;
+        }
+    }
+    @media screen and (max-width: 800px){
+        
+        #header{
+        width: 800px;}
+        .p{
+            width: 600px;
+            margin-left: 100px;
+        }
+        .gywm{
+            width:800px ;
+        }
+        .o{
+            width: 800px;
+            height: 150px;
+        }
+        .db{
+            width: 800px;
+        }
+        #ditu{
+            width: 400px;
+            height: 300px;
+        }
+        .v{
+            width: 600px;
+        }
+        .x{
+            margin-left: -30px;
+        }
+    }
+    @media screen and (max-width: 500px){
+       
+        #header{
+        width: 500px;}
+        .p{
+            width: 300px;
+            margin-left: 100px;
+        }
+        .gywm{
+            width:500px ;
+        }
+        .o{
+            width: 500px;
+            height: 100px;
+        }
+        
+        .db{
+            width: 500px;
+        }
+        #ditu{
+            width: 300px;
+            height: 200px;
+        }
+        .v{
+            width: 400px;
+        }
+        .x{
+            margin-left: -50px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -115,7 +221,7 @@
                     <img  width=15px; src="img/图标.png" alt="">
                     <span class="c">复仇者联盟</span>
                 </div>
-                    <ul class="nav" style="margin-right: 100px;">
+                    <ul class="topnav" style="margin-right: 100px;">
                         <li><a style="color: black;" href="企业站about.html">关于我们   </a></li>
                         <li><a style="color: black;" href="企业站news.html">新闻   </a></li>
                         <li><a style="color: black;" href="企业站首页.html">首页   </a></li>
