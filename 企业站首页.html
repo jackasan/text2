@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
          #header {
             display: flex;
             width: 1200px;
@@ -35,50 +36,53 @@
             text-align: center;
             margin: 0 auto;
         }
-        .nav li {
+        .topnav li {
             float: right;
             margin-left: 20px;
             font-weight: bolder;
             font-size: 13px;
         }
         .d{
+            width: 100%;
             height: 600px;
-            width: 1200px;
+            /* width: 1200px; */
         }
-        .a{
+        .a{ 
+            width: 1000px;
             height: 60px;
+            margin-left: 100px;
         }
         .a h2{
             text-align: center;
         }
         .b{
-            height: 300px;
-            width: 1000px;
+            /* height: 300px; */
+            width: 1006px;
             background-color: rgb(244,244,244);
             margin-left: 100px;
             margin-top: -20px;
         }
         .e{
             margin-top: 80px;
-            margin-left: 25px;
+            margin-left: 95px;
         }
         .f{
             margin-top: 80px;
-            margin-left: 110px;
+            margin-left: 95px;
         }
         .g{
             margin-top: 80px;
-            margin-left: 110px;
+            margin-left: 95px;
         }
         .h{
             margin-top: 80px;
-            margin-left: 110px;
+            margin-left: 95px;
         }
         .all{      
                 vertical-align: top;
                 margin-left: 100px;
 				width: 1000px;
-				height: 500px;
+				/* height: 500px; */
 				font-size: 0;
 			}
 			.img{
@@ -99,13 +103,13 @@
                 position: relative;
                 margin-left: 50px;
             }
-            .img2{
+            .img2 {
                 vertical-align: top;
 				font-size: 14px;
 				display: inline-block;
 				width: 500px;
 				height: 500px;
-                margin-left: 50px;
+                /* margin-left: 50px; */
 			}
            
         .l{
@@ -122,12 +126,12 @@
         }
         .p{
             margin-left: 50px;
-            width: 1100px;
-            height: 400px;
+            width: 1040px;
+            
         }
         .db{
             width: 1200px;
-            height: 400px;
+            
             background-color: rgb(215, 215, 215);
         }
         .q{
@@ -160,6 +164,156 @@
             text-align: center;
             width: 200px;
         }
+        ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+       
+    }
+
+    ul.topnav li {float: left;}
+
+    ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+    ul.topnav li a.active {background-color: #4CAF50;}
+
+    ul.topnav li.right {float: right;}
+
+    @media screen and (max-width: 800px){
+        ul.topnav li.right,
+        ul.topnav li {float: none;}
+    }
+    @media screen and (max-width: 1000px){
+        .a{
+        width: 800px;}
+        .b{
+        width: 800px;}
+        .d{
+        width: 1000px;
+        height: 500px;}
+        #header{
+        width: 1000px;}
+        .all{
+        width: 500px;
+        margin-left: 250px;}
+        .p{
+            width: 800px;
+            margin-left: 60px;
+        }
+        .db{
+            width:1000px ;
+        }
+    }
+    @media screen and (max-width: 800px){
+        .a{
+        width: 600px;}
+        .b{
+        width: 600px;}
+        .d{
+        width: 800px;
+        height: 400px;}
+        #header{
+        width: 800px;}
+        .all{
+        width: 500px;
+        margin-left: 150px;}
+        .p{
+            width: 600px;
+            margin-left: 100px;
+        }
+        .db{
+            width:800px ;
+        }
+        /* .img{
+            width: 400px;
+            height: 400px;
+        } */
+    }
+    @media screen and (max-width: 500px){
+        .a{
+        width: 300px;}
+        .b{
+        width: 300px;}
+        .d{
+        width: 500px;
+        height: 250px;}
+        #header{
+        width: 500px;}
+        .all{
+        width: 500px;
+        margin-left: 50px;}
+        .p{
+            width: 300px;
+            margin-left: 100px;
+        }
+        .db{
+            width:500px ;
+        }
+    }
+    
+    /* @media screen and (max-width: 1000px){
+        .b{
+        width: 800px;}
+    }
+    @media screen and (max-width: 800px){
+        .b{
+        width: 600px;}
+    }
+    @media screen and (max-width: 500px){
+        .b{
+        width: 300px;}
+    }@media screen and (max-width: 1000px){
+        .d{
+        width: 1000px;
+        height: 500px;}
+    }
+    @media screen and (max-width: 800px){
+        .d{
+        width: 800px;
+        height: 400px;}
+    }
+    @media screen and (max-width: 500px){
+        .d{
+        width: 500px;
+        height: 250px;}
+    }
+    @media screen and (max-width: 1000px){
+        #header{
+        width: 1000px;}
+    }
+    @media screen and (max-width: 800px){
+        #header{
+        width: 800px;}
+    }
+    @media screen and (max-width: 500px){
+        #header{
+        width: 500px;}
+    }
+    
+    @media screen and (max-width: 1000px){
+        .all{
+        width: 500px;
+        margin-left: 250px;}
+    }
+    @media screen and (max-width: 800px){
+        .all{
+        width: 500px;
+        margin-left: 150px;}
+    } 
+    @media screen and (max-width: 500px){
+        .all{
+        width: 500px;
+        margin-left: 50px;}
+    } */
     </style>
 </head>
 <body>  
@@ -168,10 +322,10 @@
         <div id='header'>
             <div id="container" class="logo between">
                 <div class="logo" style="margin-left: 100px;">
-                    <img  width=15px; src="img/图标.png" alt="">
+                    <img  width=15px; src="img/加载.png" data-src="img/图标.png" alt="">
                     <span class="c">复仇者联盟</span>
                 </div>
-                    <ul class="nav" style="margin-right: 100px;">
+                    <ul class="topnav" style="margin-right: 100px;">
                         <li><a style="color: black;" href="企业站about.html">关于我们   </a></li>
                         <li><a style="color: black;" href="企业站news.html">新闻   </a></li>
                         <li><a style="color: black;" href="企业站首页.html">首页   </a></li>
@@ -181,7 +335,7 @@
         
         <!--大图-->
         <div class="d">
-            <img width="1200px" height="600px" src="img/大图.png" alt="">
+            <img class="img-slide img1"  src="img/加载.png" width="100%" height="100%" data-src="img/大图.png" alt="1">
         </div>
         <!--字体-->
         <div class="a">
@@ -189,17 +343,17 @@
         </div>
         
         <div class="b">
-        <img class="e"  width="150px" height="150px" src="img/拯救地球.png" alt="">
-        <img class="f"  width="150px" height="150px" src="img/英雄合照.png" alt="">
-        <img class="g"  width="150px" height="150px" src="img/寻找原石.png" alt="">
-        <img class="h"  width="150px" height="150px" src="img/宇宙旅行.png" alt="">
+        <img class="e"  width="150px" height="150px" src="img/加载.png" data-src="img/拯救地球.png" alt="">
+        <img class="f"  width="150px" height="150px" src="img/加载.png" data-src="img/英雄合照.png" alt="">
+        <img class="g"  width="150px" height="150px" src="img/加载.png" data-src="img/寻找原石.png" alt="">
+        <img class="h"  width="150px" height="150px" src="img/加载.png" data-src="img/宇宙旅行.png" alt="">
         </div>
         <div class="a">
             <h2>团队介绍</h2>
         </div>
         <div class="all">
 			<div class="img">
-				<img width="500px" height="500px" src="img/钢铁侠.png" alt="">
+				<img width="100%" height="100%" src="img/加载.png" data-src="img/钢铁侠.png" alt="">
 			</div>
 			<div class="contain">
                 <div class="l">
@@ -239,12 +393,12 @@
                 </div>
 			</div>
             <div class="img2">
-				<img width="500px" height="500px" src="img/美国队长.png" alt="">
+				<img width="100%" height="100%" src="img/加载.png" data-src="img/美国队长.png" alt="">
 			</div>
 		</div>
         <div class="all">
 			<div class="img">
-				<img width="500px" height="500px" src="img/黑寡妇.png" alt="">
+				<img width="100%" height="100%" src="img/加载.png" data-src="img/黑寡妇.png" alt="">
 			</div>
 			<div class="contain">
                 <div class="l">
@@ -270,19 +424,19 @@
         </div> -->
         <div class="p">
             <div class="z">
-                <img class="pt2" height="200px" width="200px" src="" alt="">
+                <img class="pt2" height="200px" width="200px" src="img/加载.png" data-src="" alt="">
                 <p class="x">asd</p>
             </div>
             <div class="z">
-                <img class="pt2" height="200px" width="200px" src="" alt="">
+                <img class="pt2" height="200px" width="200px" src="img/加载.png" data-src="" alt="">
                 <p class="x">asd</p>
             </div>
             <div class="z">
-                <img class="pt2" height="200px" width="200px" src="" alt="">
+                <img class="pt2" height="200px" width="200px" src="img/加载.png" data-src="" alt="">
                 <p class="x">asd</p>
             </div>
             <div class="z">
-                <img class="pt2" height="200px" width="200px" src="" alt="">
+                <img class="pt2" height="200px" width="200px" data-src="" alt="">
                 <p class="x">asd</p>
             </div>
         </div>
@@ -292,15 +446,16 @@
         <!--底部-->>
         <div class="db">
             <div class="q">
-                <img class="r"  width="200px" height="200px" src="img/地址.png" alt="">
-                <img class="s"  width="200px" height="200px" src="img/邮箱.png" alt="">
-                <img class="t"  width="200px" height="200px" src="img/电话.png" alt="">
-                <img class="u"  width="300px" height="300px" src="img/二维码.png" alt="">
+                <img class="r"  width="200px" height="200px" src="img/加载.png" data-src="img/地址.png" alt="">
+                <img class="s"  width="200px" height="200px" src="img/加载.png" data-src="img/邮箱.png" alt="">
+                <img class="t"  width="200px" height="200px" src="img/加载.png" data-src="img/电话.png" alt="">
+                <img class="u"  width="200px" height="200px" src="img/加载.png" data-src="img/二维码.png" alt="">
             </div>
         </div>
     </div>
     
-    <script type="text/javascript" src="./jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./jquery-3.1.1.min.js">
+    </script>
     <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
     <script>
     axios.get('https://www.fastmock.site/mock/b9b48993f53da69b73b086c33cd714ec/_shop-01/img').then(function(res){
@@ -314,7 +469,53 @@
             //          <h3>${res.data.onenews.title}</h3>
             //      </div> `);
          })
-        })
+        })  
+</script>
+<script>
+    // onload是等所有的资源文件加载完毕以后再绑定事件
+window.onload = function(){
+	// 获取图片列表，即img标签列表
+	var imgs = document.querySelectorAll('img');
+
+	// 获取到浏览器顶部的距离
+	function getTop(e){
+		return e.offsetTop;
+	}
+
+	// 懒加载实现
+	function lazyload(imgs){
+		// 可视区域高度
+		var h = window.innerHeight;
+		//滚动区域高度
+		var s = document.documentElement.scrollTop || document.body.scrollTop;
+		for(var i=0;i<imgs.length;i++){
+			//图片距离顶部的距离大于可视区域和滚动区域之和时懒加载
+			if ((h+s)>getTop(imgs[i])) {
+				// 真实情况是页面开始有2秒空白，所以使用setTimeout定时2s
+				(function(i){
+					setTimeout(function(){
+						// 不加立即执行函数i会等于9
+						// 隐形加载图片或其他资源，
+						//创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
+						var temp = new Image();
+						temp.src = imgs[i].getAttribute('data-src');//只会请求一次
+						// onload判断图片加载完毕，真是图片加载完毕，再赋值给dom节点
+						temp.onload = function(){
+							// 获取自定义属性data-src，用真图片替换假图片
+							imgs[i].src = imgs[i].getAttribute('data-src')
+						}
+					},2000)
+				})(i)
+			}
+		}
+	}
+	lazyload(imgs);
+
+	// 滚屏函数
+	window.onscroll =function(){
+		lazyload(imgs);
+	}
+}
 </script>
 </body>
 </html>
