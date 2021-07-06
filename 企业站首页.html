@@ -50,11 +50,15 @@
         -webkit-align-items: center;
         align-items: center;
         }
-         #header {
-            display: flex;
-            width: 100%;
-            align-items: center;
+         #header {     
+            width: 1200px;
+            margin: 0 auto;
             background-color: rgb(244, 244, 244);
+         }
+         .nav
+         {  
+             width: 1200px;
+             margin: 0 auto;
          }
         .w {
             width: 100%;
@@ -69,11 +73,6 @@
             width: 100px;
             font-size: 13px;
         }
-        /* .nav {
-            float: right;
-            list-style: none;
-            width: 100%;
-        } */
         #container {
             width: 1200px;
             text-align: center;
@@ -88,7 +87,6 @@
         .d{
             width: 1200px;
             height: 600px;
-            /* width: 1200px; */
         }
         .a{ 
             width: 1000px;
@@ -99,7 +97,6 @@
             text-align: center;
         }
         .b{
-            /* height: 300px; */
             width: 1006px;
             background-color: rgb(244,244,244);
             margin: 0 auto;
@@ -125,7 +122,6 @@
                 vertical-align: top;
                 margin: 0 auto;
 				width: 100%;
-				/* height: 500px; */
 				font-size: 0;
 			}
 			.img{
@@ -175,10 +171,12 @@
             width: 1000px;
         }
         .db{
-            width: 100%;
-            
-            
+            width: 100%;    
         }
+        .swiper-container{
+            width: 1200px;
+            height: 600px;}
+
         .q{
             width: 1100px;
             margin: 0 auto;
@@ -256,24 +254,26 @@
         width: 800px;}
         .b{
         width: 800px;}
-        /* .d{
-        width: 1000px;
-        height: 500px;} */
         #header{
         width: 800px;}
         .mo{
         width: 500px;}
-        /* margin-left: 250px;} */
         .p{
             width: 600px;
-            /* margin-left: 60px; */
         }
         .q{
             width:800px ;
             margin: 0 auto;
         }
         .img2{
+            width: 400px;
+            height: 400px;
             margin-left: 0;
+        }
+         .img{
+            width: 400px;
+            height: 400px;
+            
         }
         .r{
             width: 130px;
@@ -304,18 +304,15 @@
         .a{
         width: 600px;}
         .b{
-        width: 600px;}
-        /* .d{
-        width: 800px;
-        height: 400px;} */
+        width: 300px;}
+
         #header{
-        width: 720px;}
+        width: 600px;}
         .mo{
         width: 500px;}
-        /* margin-left: 150px;} */
+
         .p{
             width: 600px;
-            /* margin-left: 50px; */
         }
         .q{
             width:600px ;
@@ -342,7 +339,17 @@
             margin-left: 25px;
         }
         .img2{
-            margin-left: 0;
+            margin-left: 0;        
+            width: 500px;
+            height: 500px;
+        }
+        .img{
+            width: 500px;
+            height: 500px;
+            
+        };
+        .h{
+            margin-left:100px ;
         }
     }
     @media screen and (max-width: 500px){
@@ -354,22 +361,29 @@
         width: 300px;}
         .b{
         width: 300px;}
-        /* .d{
-        width: 500px;
-        height: 250px;} */
         #header{
         width: 400px;}
         .mo{
         width: 400px;}
-        /* margin-left: 50px;} */
+
         .p{
             width: 300px;     
         }
         .img2{
-            margin-left: 0;
+            margin-left: 0; 
+            width: 400px;
+            height: 400px;
+        }
+        .img{
+            width: 400px;
+            height: 400px;
         }
         .q{
             width:400px ;
+            margin: 0 auto;
+        }
+        .contain{
+            width: 400px;
             margin: 0 auto;
         }
         .r{
@@ -391,6 +405,20 @@
             width: 80px;
             height: 80px;
             margin-left: 10px;
+        }
+        .l{
+            
+            width: 400px;
+        }
+        .m{
+            
+            width: 400px;
+        }
+        .h1{
+            width: 400px;
+        }
+        .h2{
+            width: 400px;
         }
     }
     @media screen and(max-width:800px){
@@ -415,20 +443,7 @@
 </head>
 <body>  
     <div class="w">
-        <!--头部-->
-        <!-- <div id='header'>
-            <div id="container" class="logo between">
-                <div class="logo" style="margin-left: 100px;">
-                    <img  width=15px; src="img/加载.png" data-src="img/图标.png" alt="">
-                    <span class="c">复仇者联盟</span>
-                </div>
-                    <ul class="topnav" style="margin-right: 100px;">
-                        <li><a style="color: black;" href="企业站about.html">关于我们   </a></li>
-                        <li><a style="color: black;" href="企业站news.html">新闻   </a></li>
-                        <li><a style="color: black;" href="企业站首页.html">首页   </a></li>
-                    </ul>
-            </div>
-        </div> -->
+        <div id="header">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <a class="navbar-brand" href="#">复仇者联盟</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -448,7 +463,7 @@
               </ul>
             </div>  
           </nav>
-     
+         </div>
         <!--大图-->
         <div class="swiper-container">
             <div class="swiper-wrapper">

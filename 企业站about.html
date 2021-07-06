@@ -14,12 +14,12 @@
          #header {
             display: flex;
             width: 100%;
-            align-items: center;
+            margin: 0 auto;
             background-color: rgb(244, 244, 244);
          
          }
         .w {
-            /* width: 1200px; */
+           width: 100%;
             margin: 0 auto;
         }
         .logo {
@@ -92,7 +92,7 @@
             width: 1000px;
             margin-top: 50px;
             margin-bottom: 50px;
-            margin-left: 100px;
+            margin-left: 75px;
             /* position: relative; */
         }
         #ditu {  
@@ -288,9 +288,11 @@
             margin:  0 auto;
         }
         .v{
-            width: 400px;
+            width: 300px;
+            /* margin-left: -10px; */
         }
         .x{
+            width: 300px;
             margin-left: -50px;
 
         }
@@ -316,7 +318,7 @@
         }
         .text{
             width: 350px;
-            margin-left: -20px;
+            margin-left: -25px;
         }
         .p1{
             width: 300px;
@@ -384,6 +386,31 @@
             </div>
         </div>
         </div>
+        <div class="w-100">
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">联系我们</h4>
+              <p>
+                如果你有任何建议，或者其他想说的，请输入下方的输入框发送给我们
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >你想说的话</span
+                >
+                <button id="idea">发送</button>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                id="ipt" 
+              />
+            </div>
+          </div>
         <!-- model -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
             <div class="modal-dialog">
@@ -407,8 +434,20 @@
             </div>
         </div>
     </div>
-    
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
 <script>
+var idea = document.querySelector('#idea')
+			var ipt = document.querySelector('#ipt')
+			idea.addEventListener('click',function(){
+				const url = 'https://www.fastmock.site/mock/9daf2b94068959c6bbb3fbcd40431b27/enter/postmeg'
+				        const res =  axios
+				      .post(url,{
+				        username :'admin',
+				        password:'123456',
+				        mag: idea.value
+				      })
+				       alert(res)
+			})
     function loadJScript() {
         var script = document.createElement('script');
         script.type = 'text/javascript';
